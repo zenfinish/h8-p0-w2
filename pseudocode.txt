@@ -1,0 +1,26 @@
+1.  STORE "massa benda" with 600
+    STORE "percepatan benda" with 2
+    STORE "resultan gaya" without any value
+    CALCULATE "massa benda" times "percepatan benda"
+    SET "resultan gaya" value with calculation result
+    DISPLAY "resultan gaya"
+
+2.  STORE "tahun" with 2018
+    IF "tahun" divided 4 = 0 AND "tahun" divided 100 > 0 THEN
+        DISPLAY "Tahun Kabisat"
+    ELSE IF "tahun" divided 4 = 0 AND "tahun" divided 100 = 0  AND "tahun" divided 400 = 0 THEN
+        DISPLAY "Bukan Tahun Kabisat"
+
+3.  STORE "hitung pakaian" with 0
+    WHILE "hitung pakaian" < 21
+        ADD "hitung pakaian" by 1
+    DISPLAY "Nyalakan Mesin Cuci"
+
+4.  STORE "periksa siswa" with 0
+    STORE "guru menemukan" without any value
+    WHILE "periksa siswa" < 41
+        IF "guru menemukan" equals to "kuku panjang"
+            DISPLAY "Lakukan Menghukum Siswa"
+        ELSE
+            DISPLAY "Lakukan Memuji Siswa"
+        ADD "periksa siswa" by 1
