@@ -1,5 +1,5 @@
 // 1. Menyusun Barisan Bintang
-    /*var rows1 = 5;
+    var rows1 = 5;
     while (rows1 >= 1){
         console.log("*");
         rows1--;
@@ -18,7 +18,7 @@
         console.log(bintang);
     }
 
-    console.log("");*/
+    console.log("");
 
 // 3. Menyusun Barisan Tangga Bintang Dengan Nested Looping
     var rows3 = 3;
