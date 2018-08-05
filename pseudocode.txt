@@ -6,9 +6,11 @@
     DISPLAY "resultan gaya"
 
 2.  STORE "tahun" with any value
-    IF "tahun" divided 4 equals to 0 AND "tahun" divided 100 bigger than 0 THEN
-        DISPLAY "Tahun Kabisat"
-    ELSE IF "tahun" divided 4 equals to 0 AND "tahun" divided 100 equals to 0  AND "tahun" divided 400 equals to 0 THEN
+    IF
+        ("tahun" divided 4 equals to 0 AND "tahun" divided 100 bigger than 0) OR
+        ("tahun" divided 4 equals to 0 AND "tahun" divided 100 equals to 0  AND "tahun" divided 400 equals to 0)
+        THEN DISPLAY "Tahun Kabisat"
+    ELSE
         DISPLAY "Bukan Tahun Kabisat"
 
 3.  STORE "hitung pakaian" with 0
