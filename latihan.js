@@ -1,40 +1,17 @@
-/*
-    boxNumber(5);
-    12321
-    12321
-    12321
-    12321
-    12321
-
-    boxNumber(6);
-    123321
-    123321
-    123321
-    123321
-    123321
-    123321
-*/
-
 function boxNumber(nilai) {
-    var ngulang = 1;
-    var kata1 = Math.round(nilai / 2);
-    while (ngulang <= nilai){
-        var tampil = '';
-        for (var i = 1; i <= kata1; i++){
-            if (i%2 !== 0){
-                tampil += i;
-            }
+    if (nilai%2 === 0){
+        nilai = nilai - 1;
+    }
+    var tambah = '';
+    for (var i = 1; i <= nilai; i++){
+        var tambah1 = '';
+        for (var j = 1; j <= (nilai-i) / 2; j++){
+            tambah1 += ' ';
         }
-        if (nilai%2 !== 0){
-            tampil += kata1;
+        tambah += '*';
+        if (i%2 === 1){
+            console.log(tambah1+tambah);
         }
-        for (var i = nilai - kata1; i >= 1; i--){
-            if (i%2 !== 0){
-                tampil += i;
-            }
-        }
-        ngulang++;
-        console.log(tampil);
     }
 }
 
