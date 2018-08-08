@@ -25,7 +25,10 @@ function dataHandling2(input) {
     var bulan = input[3].split("/");
     console.log(bulan.sort(function(value1, value2) { return Number(value1) < Number(value2) }));
 
-    
+    var bulan = input[3].split("/");
+    console.log(bulan.join('-'));
+
+    console.log((input[1]).slice(0,14));
 }
 
 dataHandling2(input);
