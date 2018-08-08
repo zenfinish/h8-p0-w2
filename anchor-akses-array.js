@@ -1,11 +1,11 @@
 function balikString(nilai){
-    var i = 1;
+    var i = nilai.length - 1;
     var tampil = '';
-    while (i <= nilai.length{
-        tampil += nilai[i-1];
-        i++;
+    while (i >= 0){
+        tampil = tampil + nilai[i];
+        i--;
     }
     console.log(tampil);
 }
 
-balikString('Hello World');
+balikString('Hello World --');
