@@ -8,7 +8,7 @@ function pasanganTerbesar(num) {
 
     arr.sort(function(value1, value2) { return Number(value1) < Number(value2) });
 
-    return arr[0];
+    return Number(arr[0]);
 }
 
 // TEST CASES

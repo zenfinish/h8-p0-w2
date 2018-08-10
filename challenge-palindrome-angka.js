@@ -1,7 +1,7 @@
 function angkaPalindrome(num) {
     
     var stringNum  = '';
-    for(i = num + 1; i > num; i++) {
+    for(var i = num + 1; i > num; i++) {
         stringNum = String(i);
         
         var kataBalik = '';
