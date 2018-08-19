@@ -3,17 +3,48 @@ Diberikan function hitungHuruf(kalimat) yang akan menerima satu parameter berupa
 */
 
 function hitungHuruf(kata) {
-  // you can only write your code here!
-  /*var arr = kata.split(' ');
+  var kataBaru =[];
 
-  for(var i = 0; i < arr.length; i++) {
-    var str = '';
-    for(var j = 0; j < arr[i].length; j++) {
-      str += arr[i][j];
+  //1. split
+  var temp=''
+  for (var i = 0; i < kata.length; i++) {
+    if(kata[i]===' '){
+      kataBaru.push(temp);
+      temp=''
+    }
+    else{
+      temp=temp+kata[i]
+    }
+  }
+  kataBaru.push(temp);
+
+  //2.hitungjumlahperulangan
+  var jumlah=[];
+  for(var i=0; i<kataBaru.length;i++){
+    var temp=0;
+    for(var j=0;j<kataBaru[i].length;j++){
+      for(var k=0;k<kataBaru[i].length;k++){
+        if(kataBaru[i][j]===kataBaru[i][k] && j !== k ){
+          temp=temp+1
+        }
+      }
+    }
+    jumlah.push(temp/2);
+  }
+  console.log(jumlah);
+
+  //3. mecari indeks maks
+  var maks=jumlah[0]
+  var index=0;
+  for(var i=1;i<jumlah.length;i++){
+    if(jumlah[i]>maks){
+      maks=jumlah[i]
+      index=i
     }
   }
   
-  return arr;*/
+  return kataBaru[index];
+
 }
 
 // TEST CASES
