@@ -8,6 +8,16 @@ Contoh:
 
 function kaliTerusRekursif(angka) {
     // you can only write your code here!
+    var angkaString=angka.toString();
+    if(angkaString.length===1){
+        return parseInt(angkaString)
+    }else{
+        var result=1;
+        for(var i=0;i<angkaString.length;i++){
+            result=result*parseInt(angkaString[i]);
+        }
+        return kaliTerusRekursif(result)
+    }
   }
   
   // TEST CASES
