@@ -14,6 +14,7 @@ function groupAnimals(animals) {
                 temp += 1;
             }
         }
+        console.log(temp);
         if(temp !== 1) {
             penampung2.push(penampung[i]);
         }
@@ -31,7 +32,7 @@ function groupAnimals(animals) {
         }
     }
 
-    return tampil;
+    return penampung2;
 }
 
 // TEST CASES
