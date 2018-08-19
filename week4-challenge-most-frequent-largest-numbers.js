@@ -5,18 +5,44 @@ Dengan HANYA mengubah code di dalam 2 function yang diberikan (sorting dan getTo
 */
 
 function sorting(arrNumber) {
-    // code di sini
+  // code di sini
+  for(var i=0;i<arrNumber.length;i++){
+      for(var j=0;j<arrNumber.length-1;j++){
+          if(arrNumber[j]<arrNumber[j+1]){
+              temp=arrNumber[j]
+              arrNumber[j]=arrNumber[j+1];
+              arrNumber[j+1]=temp
+          }
+
+      }
   }
-  
-  function getTotal(arrNumber) {
-    // code di sini
+  return arrNumber
+}
+
+function getTotal(arrNumber) {
+  // code di sini
+  var maks=arrNumber[0];
+  for(var i=1;i<arrNumber.length;i++){
+      if(arrNumber[i]>maks){
+          maks=arrNumber[i]
+      }
   }
-  
-  function mostFrequentLargestNumbers(arrNumber) {
-    var listSort = sorting(arrNumber);
-    var countHighest = getTotal(listSort);
-    return countHighest;
+  var count=0;
+  for(var i=0;i<arrNumber.length;i++){
+      if(arrNumber[i]===maks){
+          count++
+      }
   }
+  return "Angka paling besar adalah "+maks+" jumlah kemunculan sebanyak "+count+" kali"
+
+}
+
+function mostFrequentLargestNumbers(arrNumber) {
+  var listSort = sorting(arrNumber);
+  var countHighest = getTotal(listSort);
+  return countHighest;
+}
+
   
   console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));
   //'angka paling besar adalah 8 dan jumlah kemunculan sebanyak 3 kali'

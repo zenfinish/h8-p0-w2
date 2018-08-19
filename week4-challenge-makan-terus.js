@@ -13,9 +13,14 @@ Contoh:
 */
 
 function makanTerusRekursif(waktu) {
-    // you can only write your code here!
+  // you can only write your code here!
+  if(waktu<=0){
+    return 0;
+  }else{
+      var modified=waktu-15
+      return 1 + makanTerusRekursif(modified)
   }
-  
+}
   // TEST CASES
   console.log(makanTerusRekursif(66)); // 5
   console.log(makanTerusRekursif(100)); // 7

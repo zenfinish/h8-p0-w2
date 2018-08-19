@@ -8,7 +8,15 @@ Contoh:
 
 function totalDigitRekursif(angka) {
   // you can only write your code here!
-
+  var angkaString=angka.toString();
+  if(angkaString.length===0){
+      return 0;
+  }
+  else{
+      var digit= parseInt(angkaString[0])
+      var modified=angkaString.substring(1);
+      return digit+totalDigitRekursif(modified)
+  }
 }
 
 // TEST CASES
