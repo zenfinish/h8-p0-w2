@@ -8,7 +8,6 @@ function bubbleSort(array) {
         var tmp = array[i - 1];
         array[i - 1] = array[i];
         array[i] = tmp;
-
         done = false;
       }
     }
